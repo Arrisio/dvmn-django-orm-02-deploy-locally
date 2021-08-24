@@ -34,15 +34,15 @@ DEBUG=False
 ```
 где:
 
-`HOST` - IP адрес или доменное имя БД
+`DB_HOST` - IP адрес или доменное имя БД
 
-`PORT` - Порт БД
+`DB_PORT` - Порт БД
 
-`NAME` - Имя БД
+`DB_NAME` - Имя БД
 
-`USER` - Имя пользователя БД
+`DB_USER` - Имя пользователя БД
 
-`PASSWORD` - Пароль пользователя БД
+`DB_PASSWORD` - Пароль пользователя БД
 
 `SECRET_KEY` - Секретный ключ сайта. [Подробнее про SECRET_KEY](https://djbook.ru/rel1.9/ref/settings.html#secret-key)
 

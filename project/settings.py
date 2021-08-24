@@ -6,23 +6,20 @@ load_dotenv()
 env = Env()
 env.read_env()
 
-DB_USER = env('DB_USER')
-DB_PASSWORD = env('DB_PASSWORD')
-
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "HOST": "checkpoint.devman.org",
-        "PORT": "5434",
-        "NAME": "checkpoint",
-        "USER": DB_USER,
-        "PASSWORD": DB_PASSWORD,
+        "HOST": env("DB_HOST"),
+        "PORT": env.int("DB_PORT"),
+        "NAME": env("DB_NAME"),
+        "USER": env('DB_USER'),
+        "PASSWORD": env('DB_PASSWORD'),
     }
 }
 
 INSTALLED_APPS = ["datacenter"]
 
-SECRET_KEY = "REPLACE_ME"
+SECRET_KEY = env.str('SECRET_KEY')
 
 DEBUG = os.getenv('DEBUG', False)
 
